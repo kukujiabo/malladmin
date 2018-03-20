@@ -102,6 +102,10 @@ class OrderTakeOut extends BaseApi {
         'shipping_status' => 'shipping_status|int|false||订单配送状态 1-未配送 2-配送中 3-已配送',
         
         'consign_time' => 'consign_time|string|false||发货时间',
+
+        'driver_name' => 'driver_name|string|false||驾驶员姓名',
+
+        'driver_phone' => 'driver_phone|string|false||驾驶员手机号',
         
         'sign_time' => 'sign_time|string|false||签收时间',
 

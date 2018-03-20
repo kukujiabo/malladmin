@@ -47,8 +47,17 @@ class Member extends BaseApi {
                 'nick_name'  => array('name' => 'nick_name', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '昵称'),
                 'birthday'  => array('name' => 'birthday', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '生日'),
                 'location'  => array('name' => 'location', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '所在地'),
-                // 'card'  => array('name' => 'card', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '身份证'),
                 'sex'  => array('name' => 'sex', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '性别 0-保密 1-男 2-女'),
+            ),
+
+            'memberUpdate' => array(
+            
+              'token' => 'token|string|true||管理员令牌',
+
+              'uid' => 'uid|int|true||用户id',
+
+              'member_level' => 'member_level|int|true||用户等级'
+            
             ),
 
             'getDetails' => array(
@@ -201,6 +210,18 @@ class Member extends BaseApi {
         \App\Verification($conditions, $regulation);
 
         return $this->dm->memberUnionInfo($conditions);
+    
+    }
+
+    /**
+     * 更新会员资料
+     * @desc 更新会员资料
+     *
+     *
+     */
+    public function memberUpdate() {
+    
+      return $this->dm->memberUpdate($this->retriveRuleParams(__FUNCTION__));
     
     }
 

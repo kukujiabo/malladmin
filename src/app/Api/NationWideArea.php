@@ -30,6 +30,12 @@ class NationWideArea extends BaseApi {
 
         'id' => 'id|string|true||地区id'
       
+      ),
+
+      'getCity' => array(
+
+        'token' => 'token|string|true||用户令牌'
+      
       )
       
     )); 
@@ -75,6 +81,18 @@ class NationWideArea extends BaseApi {
     $data = $this->retriveRuleParams('disable');
 
     return $this->dm->disable($data);
+  
+  }
+
+  /**
+   * 获取城市数据
+   * @desc 获取城市数据
+   *
+   * @return
+   */
+  public function getCity() {
+  
+    return $this->dm->getCity($this->retriveRuleParams(__FUNCTION__));
   
   }
 

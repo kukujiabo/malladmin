@@ -259,6 +259,11 @@ class Goods extends BaseApi {
             
               'goods_id' => 'goods_id|int|true||商品id，必传'
             
+            ),
+
+            'getAllGoods' => array(
+            
+            
             )
 
         ));
@@ -500,6 +505,18 @@ class Goods extends BaseApi {
     public function delGoods() {
 
       return $this->dm->delGoods($this->retriveRuleParams(__FUNCTION__));
+    
+    }
+
+    /**
+     * 获取全部商品
+     * @desc 获取全部商品
+     *
+     * @return int
+     */
+    public function getAllGoods() {
+    
+      return $this->dm->getAllGoods($this->retriveRuleParams(__FUNCTION__));
     
     }
 
