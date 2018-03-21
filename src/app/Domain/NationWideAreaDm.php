@@ -49,4 +49,13 @@ class NationWideAreaDm {
   
   }
 
+  /**
+   * 获取城市数据
+   */
+  public function getCity() {
+  
+    return \App\request('App.NationwideArea.QueryCity', array());
+  
+  }
+
 }

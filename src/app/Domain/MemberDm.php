@@ -66,4 +66,15 @@ class MemberDm {
     
     }
 
+    /**
+     * 更新会员资料
+     */
+    public function memberUpdate($data) {
+
+      $data['way'] = 2;
+    
+      return \App\request('App.Member.Update', $data);
+    
+    }
+
 }

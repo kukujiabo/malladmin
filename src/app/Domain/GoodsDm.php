@@ -178,4 +178,10 @@ class GoodsDm {
   
   }
 
+  public function getAllGoods($params) {
+  
+    return \App\request('App.Goods.GetAllGoods', $params); 
+  
+  }
+
 }
