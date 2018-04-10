@@ -51,6 +51,8 @@ class Goods extends BaseApi {
 
                 'goods_id' => 'goods_id|int|true||商品id',
 
+                'active' => 'active|int|false||状态'
+
             ),
 
             'queryList' => array(
