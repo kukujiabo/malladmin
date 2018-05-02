@@ -44,11 +44,11 @@ class AuthorityFilter implements Filter {
 
             }
 
-            if ((!$info['jurisdiction'] || !in_array($service, $info['jurisdiction'])) && $is_group != true) {
+            //if ((!$info['jurisdiction'] || !in_array($service, $info['jurisdiction'])) && $is_group != true) {
 
-                throw new Exception('权限不足！', 9001);
+            //    throw new Exception('权限不足！', 9001);
 
-            }
+            //}
 
         }
 
