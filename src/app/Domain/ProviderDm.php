@@ -4,7 +4,7 @@ namespace App\Domain;
 /**
  * 供应商
  */
-class Provider {
+class ProviderDm {
 
   public function addProvider($data) {
   
