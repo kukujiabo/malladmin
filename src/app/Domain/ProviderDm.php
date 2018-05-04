@@ -12,4 +12,10 @@ class ProviderDm {
   
   }
 
+  public function getList($data) {
+  
+    return \App\request('App.Provider.GetList', $data);
+  
+  }
+
 }
