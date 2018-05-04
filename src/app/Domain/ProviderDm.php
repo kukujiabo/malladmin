@@ -18,4 +18,10 @@ class ProviderDm {
   
   }
 
+  public function getAll($data) {
+  
+    return \App\request('App.Provider.GetAll', $data);
+  
+  }
+
 }
