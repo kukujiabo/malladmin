@@ -18,7 +18,7 @@ class Manager extends BaseApi {
         'pid' => 'pid|int|true||供应商id',
         'name' => 'name|string|true||项目经理名称',
         'phone' => 'phone|string|true||手机号',
-        'thumbnail' => 'thumbnail|string|true||项目经理头像',
+        'thumbnail' => 'thumbnail|string|false||项目经理头像',
         'status' => 'status|int|false|1|状态'
       
       ),
