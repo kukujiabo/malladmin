@@ -10,7 +10,7 @@ class Manager extends BaseApi {
 
   public function getRules() {
   
-    return $this->getRules(array(
+    return $this->rules(array(
     
       'addManager' => array(
       
