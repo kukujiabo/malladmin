@@ -9,7 +9,7 @@ class WorkSpaceDm {
   /**
    * 添加工地
    */
-  public function addWorkSpace() {
+  public function addWorkSpace($params) {
   
     return \App\request('App.WorkSpace.AddWorkSpace', $params);
   
@@ -18,7 +18,7 @@ class WorkSpaceDm {
   /**
    * 获取工地列表
    */
-  public function getList() {
+  public function getList($params) {
   
     return \App\request('App.WorkSpace.getList', $params);
   
