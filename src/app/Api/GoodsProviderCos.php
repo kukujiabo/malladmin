@@ -44,6 +44,7 @@ class GoodsProviderCos extends BaseApi {
       'updateCos' => array(
       
         'token' => 'token|string|true||管理员令牌',
+        'id' => 'id|int|true||价格id',
         'cost' => 'cost|float|false||进价',
         'sale_price' => 'sale_price|float|false||售价',
       
