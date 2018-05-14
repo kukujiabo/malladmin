@@ -1,4 +1,5 @@
-<?php namespace App\Api;
+<?php 
+namespace App\Api;
 
 /**
  * 供应商商品进价接口
@@ -20,6 +21,17 @@ class GoodsProviderCos extends BaseApi {
         'goods_name' => 'goods_name|string|true||商品skuid',
         'skus' => 'skus|string|true||商品规格'
       
+      ),
+
+      'getList' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+        'goods_name' => 'goods_name|string|false||商品名称',
+        'sku_name' => 'sku_name|string|false||商品规格名称',
+        'provider_id' => 'provider_id|int|false||供应商id',
+        'page' => 'page|int|false|1||页码',
+        'page_size' => 'page_size|int|false|2||每页条数'
+      
       )
     
     ));
@@ -28,7 +40,9 @@ class GoodsProviderCos extends BaseApi {
 
   /**
    * 新增商品
+   * @desc 新增商品
    *
+   * @return int num
    */
   public function addGoodsCos() {
   
@@ -36,5 +50,16 @@ class GoodsProviderCos extends BaseApi {
   
   }
 
+  /**
+   * 查询商品列表
+   * @desc 查询商品列表
+   *
+   * @return array list
+   */
+  public function getList() {
+  
+    return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
 
 }
