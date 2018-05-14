@@ -9,4 +9,10 @@ class GoodsProviderCosDm {
   
   }
 
+  public function getList($params) {
+  
+    return \App\request('App.GoodsProviderCos.GetList', $params);
+  
+  }
+
 }
