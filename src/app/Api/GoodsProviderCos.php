@@ -32,6 +32,13 @@ class GoodsProviderCos extends BaseApi {
         'page' => 'page|int|false|1||页码',
         'page_size' => 'page_size|int|false|2||每页条数'
       
+      ),
+
+      'getDetail' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+        'id' => 'id|int|true||价格id'
+      
       )
     
     ));
@@ -60,6 +67,18 @@ class GoodsProviderCos extends BaseApi {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
   
+  }
+
+  /**
+   * 查询商品详情
+   * @desc 查询商品详情
+   *
+   * @return array data
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__)); 
+
   }
 
 }

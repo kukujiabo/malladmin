@@ -15,4 +15,10 @@ class GoodsProviderCosDm {
   
   }
 
+  public function getDetail($params) {
+  
+    return \App\request('App.GoodsProviderCos.GetDetail', $params);
+  
+  }
+
 }
