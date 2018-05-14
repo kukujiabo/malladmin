@@ -21,4 +21,10 @@ class GoodsProviderCosDm {
   
   }
 
+  public function updateCos($params) {
+
+    return \App\request('App.GoodsProviderCos.UpdateCos', $params);
+
+  }
+
 }

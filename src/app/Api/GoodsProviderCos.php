@@ -39,6 +39,14 @@ class GoodsProviderCos extends BaseApi {
         'token' => 'token|string|true||管理员令牌',
         'id' => 'id|int|true||价格id'
       
+      ),
+
+      'updateCos' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+        'cost' => 'cost|float|false||进价',
+        'sale_price' => 'sale_price|float|false||售价',
+      
       )
     
     ));
@@ -79,6 +87,18 @@ class GoodsProviderCos extends BaseApi {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__)); 
 
+  }
+
+  /**
+   * 更新价格
+   * @desc 更新价格
+   *
+   * @return int num
+   */
+  public function updateCos() {
+  
+    return $this->dm->updateCos($this->retriveRuleParams(__FUNCTION__)); 
+  
   }
 
 }
