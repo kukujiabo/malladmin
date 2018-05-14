@@ -1,5 +1,4 @@
-<?php
-namespace App\Api;
+<?php namespace App\Api;
 
 /**
  * 供应商商品进价接口
@@ -33,7 +32,7 @@ class GoodsProviderCos extends BaseApi {
    */
   public function addGoodsCos() {
   
-    return $this->dm->addGoodsCos($this->retriveRulesParams(__FUNCTION__)); 
+    return $this->dm->addGoodsCos($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
