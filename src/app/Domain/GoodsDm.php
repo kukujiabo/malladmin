@@ -30,6 +30,8 @@ class GoodsDm {
    */
   public function queryList($data) {
 
+    $data['way'] = 2;
+
     return \App\request('App.Goods.QueryList', $data);
   
   }
