@@ -43,6 +43,16 @@ class Manager extends BaseApi {
         'phone' => 'phone|string|false||手机号',
         'status' => 'status|int|false||状态'
       
+      ),
+
+      'relatManager' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+        'mid' =>  'mid|int|true||项目经理id',
+        'wid' =>  'wid|int|true||工地id',
+        'min_credit' =>  'min_credit|int|true||最小额度',
+        'max_credit' =>  'max_credit|int|true||最大额度'
+      
       )
     
     ));
@@ -82,6 +92,18 @@ class Manager extends BaseApi {
   public function getAll() {
   
     return $this->dm->getAll($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 关联项目经理
+   * @desc 关联项目经理
+   *
+   * @return
+   */
+  public function relatManager() {
+  
+    return $this->dm->relatManager($this->retriveRuleParams(__FUNCTION__));
   
   }
 

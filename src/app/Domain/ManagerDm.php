@@ -25,4 +25,10 @@ class ManagerDm {
   
   }
 
+  public function relatManager($data) {
+  
+    return \App\request('App.ManagerWorkspace.AddNew', $data);
+  
+  }
+
 }
