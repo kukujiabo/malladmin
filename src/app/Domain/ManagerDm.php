@@ -19,4 +19,10 @@ class ManagerDm {
   
   }
 
+  public function getAll($data) {
+  
+    return \App\request('App.Manager.GetAll', $data);
+  
+  }
+
 }
