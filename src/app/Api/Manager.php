@@ -33,6 +33,16 @@ class Manager extends BaseApi {
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页数据条数'
       
+      ),
+
+      'getAll' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+        'pid' => 'pid|int|false||供应商id',
+        'name' => 'name|string|false||项目经理姓名',
+        'phone' => 'phone|string|false||手机号',
+        'status' => 'status|int|false||状态'
+      
       )
     
     ));
@@ -60,6 +70,18 @@ class Manager extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));  
+  
+  }
+
+  /**
+   * 查询所有条目
+   * @desc 查询所有条目
+   *
+   * @return array list
+   */
+  public function getAll() {
+  
+    return $this->dm->getAll($this->retriveRuleParams(__FUNCTION__));
   
   }
 
