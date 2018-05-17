@@ -54,6 +54,17 @@ class Manager extends BaseApi {
         'min_credit' =>  'min_credit|int|true||最小额度',
         'max_credit' =>  'max_credit|int|true||最大额度'
       
+      ),
+
+      'relatManagerList' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+        'mid' =>  'mid|int|true||项目经理id',
+        'wid' =>  'wid|int|true||工地id',
+        'status' =>  'status|int|true||状态',
+        'page' => 'page|int|false||页码',
+        'page_size' => 'page|int|false||每页条数'
+      
       )
     
     ));
@@ -105,6 +116,18 @@ class Manager extends BaseApi {
   public function relatManager() {
   
     return $this->dm->relatManager($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 关联项目经理列表
+   * @desc 关联项目经理列表
+   *
+   * @return
+   */
+  public function relatManagerList() {
+  
+    return $this->dm->relatManagerList($this->retriveRuleParams(__FUNCTION__));
   
   }
 

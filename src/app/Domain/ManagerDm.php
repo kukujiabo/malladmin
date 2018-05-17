@@ -31,4 +31,10 @@ class ManagerDm {
   
   }
 
+  public function relatManagerList($data) {
+  
+    return \App\request('App.ManagerWorkspace.GetList', $data);
+  
+  }
+
 }
