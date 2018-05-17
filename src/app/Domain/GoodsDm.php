@@ -50,6 +50,8 @@ class GoodsDm {
    */
   public function getGoodsImages($data) {
     
+    $data['status'] = 1;
+
     return \App\request('App.GoodsImages.GetAll', $data);
   
   }
