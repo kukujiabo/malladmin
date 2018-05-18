@@ -171,4 +171,10 @@ class OrderTakeOutDm {
   
   }
 
+  public function audit($data) {
+  
+    return \App\request('App.OrderTakeOut.Audit', $data);
+  
+  }
+
 }

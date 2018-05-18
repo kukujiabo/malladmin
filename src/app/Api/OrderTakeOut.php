@@ -158,6 +158,14 @@ class OrderTakeOut extends BaseApi {
         'comment' => 'comment|string|true||备注',
       
       ),
+
+      'audit' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+        'cas' => 'token|string|true||帐套号',
+        'order_nos' => 'token|string|true||订单号'
+      
+      )
       
     ));
 
@@ -540,5 +548,18 @@ class OrderTakeOut extends BaseApi {
     return $this->dm->updateReceived($this->retriveRuleParams(__FUNCTION__));
   
   }
+
+  /**
+   * 订单审核
+   * @desc 订单审核
+   *
+   * @return int array
+   */
+  public function audit() {
+  
+    return $this->dm->audit($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
 
 }
