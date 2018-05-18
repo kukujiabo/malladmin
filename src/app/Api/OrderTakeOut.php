@@ -162,8 +162,8 @@ class OrderTakeOut extends BaseApi {
       'audit' => array(
       
         'token' => 'token|string|true||用户令牌',
-        'cas' => 'token|string|true||帐套号',
-        'order_nos' => 'token|string|true||订单号'
+        'cas' => 'cas|string|true||帐套号',
+        'order_nos' => 'order_nos|string|true||订单号'
       
       )
       
