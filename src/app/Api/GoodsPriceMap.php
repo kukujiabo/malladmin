@@ -46,6 +46,18 @@ class GoodsPriceMap extends BaseApi {
 
         'page_size' => 'page_size|int|false|20|每页条数'
       
+      ),
+
+      'edit' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+
+        'id' => 'id|int|true||价格id',
+
+        'price' => 'price|float|false||价格',
+
+        'tax_off_price' => 'tax_off_price|float|false||含税价格'
+      
       )
     
     ));
@@ -76,5 +88,16 @@ class GoodsPriceMap extends BaseApi {
   
   }
 
+  /**
+   * 编辑价格
+   * @desc 编辑价格
+   *
+   * @return int num
+   */
+  public function edit() {
+  
+    return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
 
 }

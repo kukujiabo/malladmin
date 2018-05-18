@@ -18,4 +18,10 @@ class GoodsPriceMapDm {
   
   }
 
+  public function edit($params) {
+  
+    return \App\request('App.GoodsPriceMap.Edit', $params);
+  
+  }
+
 }
