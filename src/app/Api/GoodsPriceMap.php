@@ -34,6 +34,14 @@ class GoodsPriceMap extends BaseApi {
       
       ),
 
+      'getDetail' => array(
+
+        'token' => 'token|string|true||用户令牌',
+      
+        'id' => 'id|int|true||商品价格id'
+      
+      ),
+
       'getList' => array(
 
         'token' => 'token|string|true||用户令牌',
@@ -97,6 +105,26 @@ class GoodsPriceMap extends BaseApi {
   public function edit() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询单条价格详情
+   */
+  public function getDetail() {
+  
+  
+  }
+
+  /**
+   * 删除价格
+   * @desc 删除价格
+   *
+   * @return int num
+   */
+  public function remove() {
+  
+    return $this->dm->remove($this->remove(__FUNCTION__));
   
   }
 

@@ -32,6 +32,7 @@ class Member extends BaseApi {
                 'is_system' => 'is_system|int|false||是否是系统后台管理员 0-不是 1-是',
                 'is_member' => 'is_member|int|false||是否是前台会员 0-不是 1-是',
                 'reg_time' => 'reg_time|string|false||注册时间',
+                'reference' => 'reference|string|false||上级用户id',
                 'fields' => 'fields|string|false|*|查询字段',
                 'order' => 'order|string|false||排序',
                 'page' => 'page|int|true|1|页码',
