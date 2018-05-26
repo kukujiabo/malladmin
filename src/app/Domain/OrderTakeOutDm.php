@@ -177,4 +177,10 @@ class OrderTakeOutDm {
   
   }
 
+  public function removeOrder($data) {
+  
+    return \App\request('App.OrderTakeOut.RemoveOrder', $data);
+  
+  }
+
 }
