@@ -55,6 +55,8 @@ class OrderTakeOut extends BaseApi {
         
         'shipping_time' => 'shipping_time|string|false||买家要求的配送时间',
 
+        'recommend_phone' => 'recommend_phone|string|false|*|业务员手机号',
+
         'fields' => 'fields|string|false|*|查询字段',
 
         'order' => 'order|string|false||排序',
