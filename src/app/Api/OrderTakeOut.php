@@ -165,6 +165,13 @@ class OrderTakeOut extends BaseApi {
         'cas' => 'cas|string|true||帐套号',
         'order_nos' => 'order_nos|string|true||订单号'
       
+      ),
+
+      'removeOrder' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+        'order_id' => 'order_id|string|true||订单id'
+      
       )
       
     ));
@@ -561,5 +568,16 @@ class OrderTakeOut extends BaseApi {
   
   }
 
+  /**
+   * 删除订单
+   * @desc 删除订单
+   *
+   * @return int num
+   */
+  public function removeOrder() {
+  
+    return $this->dm->removeOrder($this->retriveRuleParams(__FUNCTION__));
+  
+  }
 
 }
