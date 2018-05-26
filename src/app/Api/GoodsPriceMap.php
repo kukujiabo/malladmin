@@ -30,7 +30,10 @@ class GoodsPriceMap extends BaseApi {
 
         'skus' => 'skus|string|true||商品sku',
 
-        'goods_name' => 'goods_name|string|true||商品名称'
+        'goods_name' => 'goods_name|string|true||商品名称',
+
+        'tax_off_price' => 'tax_off_price|float|false||含税价格'
+
       
       ),
 
