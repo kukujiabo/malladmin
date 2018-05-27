@@ -183,4 +183,10 @@ class OrderTakeOutDm {
   
   }
 
+  public function getSalesAmount($params) {
+  
+    return \App\request('App.OrderTakeOut.GetSalesAmount', $data);
+  
+  }
+
 }
