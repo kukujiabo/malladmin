@@ -151,7 +151,7 @@ class Goods extends BaseApi {
 
                 'is_recommend' => 'is_recommend|int|false|1|推荐到首页 1-关闭 2-开启',
 
-                // 'recommend_img' => 'recommend_img|string|false||推荐封面',
+                'cities' => 'cities|string|false||销售城市',
 
                 'recommend_title' => 'recommend_title|string|false||推荐标题',
 
@@ -210,6 +210,8 @@ class Goods extends BaseApi {
                 'description' => 'description|string|true||商品详情（图文）',
 
                 'is_promotion' => 'is_promotion|int|false|1|促销秒杀 1-关闭 2-开启',
+
+                'cities' => 'cities|string|false||销售城市',
 
                 'promotion_start_time' => 'promotion_start_time|string|false||促销开始日期',
 
