@@ -135,7 +135,7 @@ class GoodsPriceMap extends BaseApi {
    */
   public function remove() {
   
-    return $this->dm->remove($this->remove(__FUNCTION__));
+    return $this->dm->remove($this->retriveRuleParams(__FUNCTION__));
   
   }
 
@@ -147,7 +147,7 @@ class GoodsPriceMap extends BaseApi {
    */
   public function batchEdit() {
   
-    return $this->dm->batchEdit($this->batchEdit(__FUNCTION__)); 
+    return $this->dm->batchEdit($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
