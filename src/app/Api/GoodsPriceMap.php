@@ -69,6 +69,14 @@ class GoodsPriceMap extends BaseApi {
 
         'tax_off_price' => 'tax_off_price|float|false||含税价格'
       
+      ),
+
+      'batchEdit' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+
+        'data' => 'data|string|true||数据'
+      
       )
     
     ));
@@ -128,6 +136,18 @@ class GoodsPriceMap extends BaseApi {
   public function remove() {
   
     return $this->dm->remove($this->remove(__FUNCTION__));
+  
+  }
+
+  /**
+   * 批量修改价格
+   * @desc 批量修改价格
+   *
+   * @return
+   */
+  public function batchEdit() {
+  
+    return $this->dm->batchEdit($this->batchEdit(__FUNCTION__)); 
   
   }
 

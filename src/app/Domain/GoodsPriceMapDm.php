@@ -24,4 +24,10 @@ class GoodsPriceMapDm {
   
   }
 
+  public function batchEdit($params) {
+  
+    return \App\request('App.GoodsPriceMap.BatchEdit', $params);
+  
+  }
+
 }
