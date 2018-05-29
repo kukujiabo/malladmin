@@ -77,6 +77,14 @@ class GoodsPriceMap extends BaseApi {
 
         'data' => 'data|string|true||数据'
       
+      ),
+
+      'remove' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+
+        'id' => 'id|int|true||价格id'
+      
       )
     
     ));

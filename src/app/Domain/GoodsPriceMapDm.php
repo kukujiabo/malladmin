@@ -30,4 +30,10 @@ class GoodsPriceMapDm {
   
   }
 
+  public function remove($params) {
+  
+    return \App\request('App.GoodsPriceMap.Remove', $params);
+  
+  }
+
 }
