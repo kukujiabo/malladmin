@@ -73,8 +73,8 @@ class Member extends BaseApi {
                'card_id' => 'card_id|string|false||会员卡号',
                'reg_start_time' => 'reg_start_time|string|false||注册结束时间',
                'reg_end_time' => 'reg_end_time|string|false||注册结束时间',
-               'page' => 'page|string|false||页码',
-               'pageSize' => 'pageSize|string|false||每页条数'
+               'page' => 'page|int|false||页码',
+               'page_size' => 'page_size|int|false||每页条数'
             ),
 
             'memberIncrease' => array(
@@ -209,14 +209,6 @@ class Member extends BaseApi {
     public function memberUnionInfo() {
     
         $conditions = $this->retriveRuleParams('memberUnionInfo');
-
-        $regulation = array(
-            
-            'token' => 'required',
-
-        );
-
-        \App\Verification($conditions, $regulation);
 
         return $this->dm->memberUnionInfo($conditions);
     
