@@ -77,4 +77,10 @@ class MemberDm {
     
     }
 
+    public function updateReference($data) {
+    
+      return \App\request('App.User.UpdateReference', $data);
+    
+    }
+
 }

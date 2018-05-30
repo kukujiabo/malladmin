@@ -83,6 +83,14 @@ class Member extends BaseApi {
 
             ),
 
+            'updateReference' => array(
+            
+               'token' => 'token|string|true||用户令牌',
+               'phone' => 'phone|string|true||业务员手机号',
+               'uid' => 'uid|int|true||用户id'
+            
+            )
+
         ));
 
     }
@@ -223,6 +231,18 @@ class Member extends BaseApi {
     public function memberUpdate() {
     
       return $this->dm->memberUpdate($this->retriveRuleParams(__FUNCTION__));
+    
+    }
+
+    /**
+     * 更新业务员
+     * @desc 更新业务员
+     *
+     * @return
+     */
+    public function updateReference() {
+    
+      return $this->dm->updateReference($this->retriveRuleParams(__FUNCTION__));
     
     }
 
