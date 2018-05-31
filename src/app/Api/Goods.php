@@ -73,6 +73,8 @@ class Goods extends BaseApi {
 
                 'is_sku' => 'is_sku|int|false||规格类型 1-多规格 2-单规格',
 
+                'no_code' => 'no_code|string|false||商品编码',
+
                 'fields' => 'fields|string|false|*|查询字段',
 
                 'order' => 'order|string|false||排序',
