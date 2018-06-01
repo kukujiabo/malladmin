@@ -189,4 +189,45 @@ class OrderTakeOutDm {
   
   }
 
+  public function asyncRecall($data) {
+  
+    $decode = json_decode($data);
+
+    if (empty($decode['sn']) {
+    
+      return array('err_msg' => '订单号不能为空');
+    
+    }
+    if (empty($decode['export_code'] && empty($decode['return_code'])) {
+
+      return array('err_msg' => '出库单号或退货单号必须填写');
+    
+    }
+
+    $updateData = array('sn' => $decode['sn']);
+
+    if ($decode['export_code']) {
+
+      $secret = md5("export_code={$decode['export_code']}sn={$decode['sn']}time={$decode['time']}");
+
+      $updateData['export_code'] = $decode['export_data'];
+
+    } else {
+    
+      $secret = md5("return_code={$decode['return_code']}sn={$decode['sn']}time={$decode['time']}");
+
+      $updateData['return_code'] = $decode['return_code'];
+    
+    }
+
+    if ($secret != $decode['secret_key']) {
+    
+      return array('err_msg' => '秘钥错误');
+    
+    }
+
+    return \App\request('App.OrderTakeOut.Update', $updateData);
+  
+  }
+
 }

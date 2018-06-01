@@ -226,6 +226,11 @@ class OrderTakeOut extends BaseApi {
 
         'recommend_phone' => 'recommend_phone|string|false||业务员手机号'
       
+      ),
+
+      'asyncRecall' => array(
+      
+      
       )
       
     ));
@@ -643,6 +648,20 @@ class OrderTakeOut extends BaseApi {
   public function getSalesAmount() {
   
     return $this->dm->getSalesAmount($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 同步订单回调
+   * @desc 同步订单回调
+   *
+   * @return int num
+   */
+  public function asyncRecall() {
+
+    $data = file_get_contents("php://input");
+  
+    return $this->dm->asyncRecall($data);
   
   }
 
