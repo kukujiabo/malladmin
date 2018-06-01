@@ -14,7 +14,7 @@ class AuthorityFilter implements Filter {
         $service = \PhalApi\DI()->request->get('service');
 
         // 排除登录和注销的接口
-        if ($service != 'App.Admin.Login' && $service != 'App.Admin.Logout' && $service != 'App.Qiniu.GetUploadToken') {
+        if ($service != 'App.Admin.Login' && $service != 'App.Admin.Logout' && $service != 'App.Qiniu.GetUploadToken' && $service != 'App.OrderTakeOut.AsyncRecall') {
 
             if (!$token) {
 
