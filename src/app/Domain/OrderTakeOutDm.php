@@ -191,7 +191,7 @@ class OrderTakeOutDm {
 
   public function asyncRecall($data) {
   
-    $decode = json_decode($data);
+    $decode = json_decode($data, true);
 
     if (empty($decode['sn'])) {
     
