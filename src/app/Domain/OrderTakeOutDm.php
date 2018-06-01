@@ -198,7 +198,7 @@ class OrderTakeOutDm {
       return array('err_msg' => '订单号不能为空');
     
     }
-    if (empty($decode['export_code'] && empty($decode['return_code'])) {
+    if (empty($decode['export_code'] && empty($decode['return_code']))) {
 
       return array('err_msg' => '出库单号或退货单号必须填写');
     
