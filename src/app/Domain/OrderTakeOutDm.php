@@ -193,7 +193,7 @@ class OrderTakeOutDm {
   
     $decode = json_decode($data);
 
-    if (empty($decode['sn']) {
+    if (empty($decode['sn'])) {
     
       return array('err_msg' => '订单号不能为空');
     
