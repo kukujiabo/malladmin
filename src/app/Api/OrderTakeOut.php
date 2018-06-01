@@ -113,6 +113,10 @@ class OrderTakeOut extends BaseApi {
 
         'finish_time' => 'finish_time|string|false||完成时间',
 
+        'export_code' => 'export_code|string|false||出库单号',
+
+        'return_code' => 'return_code|string|false||退货单号',
+
         'pay_time' => 'pay_time|string|false||支付时间',
       
       ),
