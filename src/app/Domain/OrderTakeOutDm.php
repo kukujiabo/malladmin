@@ -210,7 +210,7 @@ class OrderTakeOutDm {
 
       $secret = md5("export_code={$decode['export_code']}sn={$decode['sn']}time={$decode['time']}");
 
-      $updateData['export_code'] = $decode['export_data'];
+      $updateData['export_code'] = $decode['export_code'];
 
     } else {
     
