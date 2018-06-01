@@ -197,6 +197,8 @@ class OrderTakeOut extends BaseApi {
         'user_tel' => 'user_tel|string|false||手机号',
         
         'member_name' => 'member_name|string|false||用户名',
+
+        'category_id' => 'category_id|string|false||分类id',
         
         'consigner' => 'consigner|string|false||收货人',
 
