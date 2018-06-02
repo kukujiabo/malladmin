@@ -95,4 +95,16 @@ class Provider extends BaseApi {
   
   }
 
+  /**
+   * 查询单个供应商详情
+   * @desc 查询单个供应商详情
+   *
+   * @return array object
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
 }
