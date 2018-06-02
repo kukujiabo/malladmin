@@ -44,6 +44,13 @@ class Provider extends BaseApi {
       
       ),
 
+      'getDetail' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+        'id' => 'id|int|true||装修公司id'
+
+      ),
+
       'getAll' => array(
       
       )

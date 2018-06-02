@@ -24,4 +24,10 @@ class ProviderDm {
   
   }
 
+  public function getDetail($data) {
+  
+    return \App\request('App.Provider.GetDetail', $data);
+  
+  }
+
 }
