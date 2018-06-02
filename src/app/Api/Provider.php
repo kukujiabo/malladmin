@@ -29,6 +29,22 @@ class Provider extends BaseApi {
       
       ),
 
+      'edit' => array(
+      
+        'id' => 'id|int|true||装修公司id',
+        'pname' => 'pname|string|false||装修公司名称',
+        'contact' => 'contact|string|false||装修公司联系人',
+        'phone' => 'phone|string|false||装修公司手机号',
+        'account' => 'account|string|false||装修公司账号',
+        'province' => 'province|string|false||装修公司省份',
+        'city' => 'city|string|false||装修公司城市',
+        'introduction' => 'introduction|string|false||装修公司简介',
+        'thumbnail' => 'thumbnail|string|false||装修公司图标'
+        'password' => 'password|string|false||装修公司密码'
+        'status' => 'status|int|false||装修公司状态'
+      
+      ),
+
       'getList' => array(
       
         'token' => 'token|string|true||管理员令牌',
@@ -104,6 +120,18 @@ class Provider extends BaseApi {
   public function getDetail() {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 更新供应商资料
+   * @desc 更新供应商资料
+   *
+   * @return int num
+   */
+  public function edit() {
+  
+    return $this->dm->edit($this->retriveRuleParams(__FUNCTION__));
   
   }
 

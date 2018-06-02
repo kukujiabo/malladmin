@@ -30,4 +30,10 @@ class ProviderDm {
   
   }
 
+  public function edit($data) {
+  
+    return \App\request('App.Provider.Edit', $data); 
+  
+  }
+
 }
