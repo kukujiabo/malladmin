@@ -214,10 +214,18 @@ class OrderTakeOutDm {
 
     } else {
     
+      if (empty($updateData['goods'])) {
+      
+        return array('err_msg' => '退货商品必须填写！');
+      
+      }
+
       $secret = md5("return_code={$decode['return_code']}sn={$decode['sn']}time={$decode['time']}");
 
       $updateData['return_code'] = $decode['return_code'];
-    
+
+      $updateData['goods'] = $decode['goods'];
+
     }
 
     if ($secret != $decode['secret_key']) {
