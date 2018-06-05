@@ -58,7 +58,7 @@ class OrderTakeOutDm {
 
     $data['shipping_status'] = 1;
 
-    $data['order_statsu'] = 3;
+    $data['order_status'] = 3;
 
     return \App\request('App.OrderTakeOut.Update', $data);
   
