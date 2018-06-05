@@ -163,11 +163,11 @@ class OrderTakeOutDm {
   
     $data['way'] = 2;
 
-    $data['consign_time'] = date("Y-m-d H:i:s");
+    $data['sign_time'] = date("Y-m-d H:i:s");
 
     $data['shipping_status'] = 3;
 
-    $data['shipping_status'] = 3;
+    $data['order_status'] = 4;
 
     return \App\request('App.OrderTakeOut.Update', $data);
   
