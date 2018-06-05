@@ -60,7 +60,13 @@ class OrderTakeOutDm {
 
     $data['order_status'] = 3;
 
-    return \App\request('App.OrderTakeOut.Update', $data);
+    $result =  \App\request('App.OrderTakeOut.Update', $data);
+
+    if ($result) {
+    
+      return $data['consign_time'];
+    
+    }
   
   }
 
@@ -77,7 +83,13 @@ class OrderTakeOutDm {
 
     $data['pay_time'] = date("Y-m-d H:i:s");
 
-    return \App\request('App.OrderTakeOut.Update', $data);
+    $result = \App\request('App.OrderTakeOut.Update', $data);
+
+    if ($result) {
+    
+      return $data['pay_time'];
+    
+    }
   
   }
 
@@ -169,7 +181,13 @@ class OrderTakeOutDm {
 
     $data['order_status'] = 4;
 
-    return \App\request('App.OrderTakeOut.Update', $data);
+    $result = \App\request('App.OrderTakeOut.Update', $data);
+
+    if ($result) {
+    
+      return $data['sign_time'];
+
+    }
   
   }
 
