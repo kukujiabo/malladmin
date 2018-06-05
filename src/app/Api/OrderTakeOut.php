@@ -366,16 +366,6 @@ class OrderTakeOut extends BaseApi {
 
     $params = $this->retriveRuleParams(__FUNCTION__);
 
-    $regulation = array(
-
-      'token' => 'required',
-
-      'order_id' => 'required',
-
-    );
-
-    \App\Verification($params, $regulation);
-
     return $this->dm->updatePay($params);
   
   }

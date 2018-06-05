@@ -56,7 +56,9 @@ class OrderTakeOutDm {
 
     $data['consign_time'] = date("Y-m-d H:i:s");
 
-    $data['shipping_status'] = 2;
+    $data['shipping_status'] = 1;
+
+    $data['order_statsu'] = 3;
 
     return \App\request('App.OrderTakeOut.Update', $data);
   
@@ -71,7 +73,7 @@ class OrderTakeOutDm {
 
     $data['order_status'] = 2;
 
-    $data['pay_status'] = 2;
+    $data['pay_status'] = 1;
 
     $data['pay_time'] = date("Y-m-d H:i:s");
 
