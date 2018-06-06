@@ -228,7 +228,7 @@ class OrderTakeOutDm {
 
     if ($decode['export_code']) {
 
-      $secret = md5("export_code={$decode['export_code']}sn={$decode['sn']}time={$decode['time']}");
+      $secret = md5("export_code={$decode['export_code']}sn={$decode['sn']}");
 
       $updateData['export_code'] = $decode['export_code'];
 
@@ -248,7 +248,7 @@ class OrderTakeOutDm {
       
       }
 
-      $secret = md5("return_code={$decode['return_code']}sn={$decode['sn']}time={$decode['time']}");
+      $secret = md5("return_code={$decode['return_code']}sn={$decode['sn']}");
 
       $updateData['return_code'] = $decode['return_code'];
 
