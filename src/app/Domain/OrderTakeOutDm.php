@@ -232,6 +232,14 @@ class OrderTakeOutDm {
 
       $updateData['export_code'] = $decode['export_code'];
 
+      if ($secret != $decode['secret_key']) {
+      
+        return array('err_msg' => '秘钥错误');
+      
+      }
+
+      return \App\request('App.OrderTakeOut.Update', $updateData);
+
     } else {
     
       if (empty($updateData['goods'])) {
@@ -244,17 +252,18 @@ class OrderTakeOutDm {
 
       $updateData['return_code'] = $decode['return_code'];
 
-      $updateData['goods'] = $decode['goods'];
+      $updateData['goods'] = json_encode($decode['goods']);
+
+      if ($secret != $decode['secret_key']) {
+      
+        return array('err_msg' => '秘钥错误');
+      
+      }
+
+      return \App\request('App.OrderTakeOutGoods.ReturnGoods', $updateData);
 
     }
 
-    if ($secret != $decode['secret_key']) {
-    
-      return array('err_msg' => '秘钥错误');
-    
-    }
-
-    return \App\request('App.OrderTakeOut.Update', $updateData);
   
   }
 
