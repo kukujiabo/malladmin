@@ -240,7 +240,7 @@ class OrderTakeOutDm {
 
       $result = \App\request('App.OrderTakeOut.Update', $updateData);
 
-      if ($result > 1) {
+      if ($result > 0) {
 
         return array('err_msg' => "" );
 
@@ -272,7 +272,7 @@ class OrderTakeOutDm {
 
       $result = \App\request('App.OrderTakeOutGoods.ReturnGoods', $updateData);
 
-      if ($result > 1) {
+      if ($result > 0) {
 
         return array('err_msg' => "");
 
