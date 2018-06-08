@@ -240,7 +240,15 @@ class OrderTakeOutDm {
 
       $result = \App\request('App.OrderTakeOut.Update', $updateData);
 
-      return array('err_msg' => $result);
+      if ($result == 1) {
+
+        return array('err_msg' => "" );
+
+      } else {
+      
+        return array('err_msg' => "更新失败！");
+      
+      }
 
     } else {
     
@@ -264,7 +272,15 @@ class OrderTakeOutDm {
 
       $result = \App\request('App.OrderTakeOutGoods.ReturnGoods', $updateData);
 
-      return array('err_msg' => $result);
+      if ($result == 1) {
+
+        return array('err_msg' => "");
+
+      } else {
+      
+        return array('err_msg' => "更新失败！");
+      
+      }
 
     }
 
