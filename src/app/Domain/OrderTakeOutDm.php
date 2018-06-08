@@ -238,7 +238,9 @@ class OrderTakeOutDm {
       
       }
 
-      return \App\request('App.OrderTakeOut.Update', $updateData);
+      $result = \App\request('App.OrderTakeOut.Update', $updateData);
+
+      return array('err_msg' => $result);
 
     } else {
     
