@@ -252,7 +252,7 @@ class OrderTakeOutDm {
 
     } else {
     
-      if (empty($updateData['goods'])) {
+      if (empty($decode['goods'])) {
       
         return array('err_msg' => '退货商品必须填写！');
       
