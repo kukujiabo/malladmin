@@ -262,7 +262,7 @@ class OrderTakeOutDm {
 
       $updateData['return_code'] = $decode['return_code'];
 
-      $updateData['goods'] = json_encode($decode['goods']);
+      $updateData['goods'] = $decode['goods'];
 
       if ($secret != $decode['secret_key']) {
       
