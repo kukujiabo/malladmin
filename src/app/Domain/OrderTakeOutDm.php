@@ -260,7 +260,9 @@ class OrderTakeOutDm {
       
       }
 
-      return \App\request('App.OrderTakeOutGoods.ReturnGoods', $updateData);
+      $result = \App\request('App.OrderTakeOutGoods.ReturnGoods', $updateData);
+
+      return array('err_msg' => $result);
 
     }
 
