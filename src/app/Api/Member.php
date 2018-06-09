@@ -42,6 +42,7 @@ class Member extends BaseApi {
             'update' => array(
                 'uid'  => array('name' => 'uid', 'type' => 'string', 'require' => true, 'default' => '', 'desc' => '用户id'),
                 'user_name'  => array('name' => 'user_name', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '帐号（手机号码）'),
+                'user_tel'  => array('name' => 'user_tel', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '手机号码'),
                 'user_password'  => array('name' => 'user_password', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '密码明文'),
                 'user_headimg'  => array('name' => 'user_headimg', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '用户头像'),
                 'real_name'  => array('name' => 'real_name', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '真实姓名'),
