@@ -58,7 +58,9 @@ class Member extends BaseApi {
 
               'uid' => 'uid|int|true||用户id',
 
-              'member_level' => 'member_level|int|true||用户等级'
+              'member_level' => 'member_level|int|true||用户等级',
+
+              'member_name' => 'member_name|string|true||会员昵称'
             
             ),
 
