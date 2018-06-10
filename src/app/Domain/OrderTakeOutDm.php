@@ -284,6 +284,15 @@ class OrderTakeOutDm {
 
     }
 
+  }
+
+  /**
+   * 订单退货
+   *
+   */
+  public function orderAfterSale($data) {
+  
+    return \App\request('App.OrderTakeOut.OrderAfterSale', $data); 
   
   }
 

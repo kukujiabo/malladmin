@@ -244,6 +244,14 @@ class OrderTakeOut extends BaseApi {
       
       ),
 
+      'orderAfterSale' => array(
+      
+        'sn' => 'sn|string|true||订单编号',
+        'sku_id' => 'sku_id|int|true||商品id',
+        'num' => 'num|int|true||退货数量'
+      
+      ),
+
       'asyncRecall' => array(
       
       
@@ -668,6 +676,18 @@ class OrderTakeOut extends BaseApi {
     $data = file_get_contents("php://input");
   
     return $this->dm->asyncRecall($data);
+  
+  }
+
+  /**
+   * 订单退货
+   * @desc 订单退货
+   *
+   * @return 
+   */
+  public function orderAfterSale() {
+  
+    return $this->dm->orderAfterSale($this->retriveRuleParams(__FUNCTION__));  
   
   }
 
