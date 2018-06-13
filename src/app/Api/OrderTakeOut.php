@@ -254,7 +254,7 @@ class OrderTakeOut extends BaseApi {
 
       'updateCas' => array(
       
-        'id' => 'id|int|true||订单id',
+        'order_id' => 'order_id|int|true||订单id',
         'cas' => 'cas|string|true||订单帐套号'
       
       ),
