@@ -296,4 +296,15 @@ class OrderTakeOutDm {
   
   }
 
+  /**
+   * 修改帐套
+   */
+  public function updateCas($data) {
+  
+    $data['way'] = 2;
+
+    return \App\request('App.OrderTakeOut.Update', $data);
+  
+  }
+
 }
