@@ -14,6 +14,7 @@ class OrderTakeOutGoods extends BaseApi {
     
       'getAll' => array(
       
+        'token' => 'token|string|true||令牌',
         'order_take_out_id' => 'order_take_out_id|int|true||订单id'
       
       )
