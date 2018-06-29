@@ -75,7 +75,7 @@ class Member extends BaseApi {
                'reference' => 'reference|string|false||会员业务员编号',
                'user_tel' => 'user_tel|string|false||会员手机号',
                'card_id' => 'card_id|string|false||会员卡号',
-               'reg_start_time' => 'reg_start_time|string|false||注册结束时间',
+               'reg_start_time' => 'reg_start_time|string|false||注册开始时间',
                'reg_end_time' => 'reg_end_time|string|false||注册结束时间',
                'page' => 'page|int|false||页码',
                'page_size' => 'page_size|int|false||每页条数'
