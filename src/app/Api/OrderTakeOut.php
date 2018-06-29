@@ -35,6 +35,10 @@ class OrderTakeOut extends BaseApi {
         
         'consigner' => 'consigner|string|false||收货人',
 
+        'reg_start' => 'reg_start|string|false||注册起始时间',
+        
+        'reg_end' => 'reg_end|string|false||注册结束时间',
+
         'mobile' => 'mobile|string|false||收货人手机号',
 
         'category_id' => 'category_id|string|false||商品分类编号',
