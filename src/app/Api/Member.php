@@ -71,6 +71,7 @@ class Member extends BaseApi {
             'memberUnionInfo' => array(
                'token' => 'token|string|true||用户令牌',
                'member_name' => 'member_name|string|false||会员名称',
+               'remark' => 'remark|string|false||会员备注',
                'member_level' => 'member_level|string|false||会员等级',
                'reference' => 'reference|string|false||会员业务员编号',
                'user_tel' => 'user_tel|string|false||会员手机号',
