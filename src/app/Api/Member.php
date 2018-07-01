@@ -46,6 +46,7 @@ class Member extends BaseApi {
                 'user_password'  => array('name' => 'user_password', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '密码明文'),
                 'user_headimg'  => array('name' => 'user_headimg', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '用户头像'),
                 'real_name'  => array('name' => 'real_name', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '真实姓名'),
+                'remark'  => array('name' => 'remark', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '会员备注'),
                 'nick_name'  => array('name' => 'nick_name', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '昵称'),
                 'birthday'  => array('name' => 'birthday', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '生日'),
                 'location'  => array('name' => 'location', 'type' => 'string', 'require' => false, 'default' => '', 'desc' => '所在地'),
@@ -60,7 +61,9 @@ class Member extends BaseApi {
 
               'member_level' => 'member_level|int|true||用户等级',
 
-              'member_name' => 'member_name|string|true||会员昵称'
+              'member_name' => 'member_name|string|true||会员昵称',
+
+              'member_name' => 'member_name|string|true||会员昵称',
             
             ),
 
