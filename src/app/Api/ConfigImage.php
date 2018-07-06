@@ -17,7 +17,8 @@ class ConfigImage extends BaseApi {
         'token' => 'token|string|true||用户令牌',
         'module' => 'module|int|true||所属模块',
         'type' => 'type|int|true||所属类型',
-        'url' => 'url|string|true||链接'
+        'url' => 'url|string|true||链接',
+        'city_code' => 'city_code|string|false||城市编码'
       
       ),
     
