@@ -52,6 +52,13 @@ class ConfigImage extends BaseApi {
         'id' => 'id|int|true||图片id'
       
       ),
+
+
+      'getAll' => array(
+      
+        'token' => 'token|string|true||用户令牌'
+      
+      )
     
     )); 
   
@@ -101,4 +108,17 @@ class ConfigImage extends BaseApi {
     return $this->dm->remove($this->retriveRuleParams(__FUNCTION__));
   
   }
+
+  /**
+   * 获取全部
+   * @desc 获取全部
+   *
+   * @return array list
+   */
+  public function getAll() {
+
+    return $this->dm->remove($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
 }

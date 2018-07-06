@@ -27,4 +27,10 @@ class ConfigImageDm {
   
   }
 
+  public function getAll($params) {
+  
+    return \App\request('App.ConfigImage.GetAll', $params);
+  
+  }
+
 }
