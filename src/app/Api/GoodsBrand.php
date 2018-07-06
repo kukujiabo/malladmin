@@ -20,7 +20,8 @@ class GoodsBrand extends BaseApi {
         'brand_code' => 'brand_code|string|true||品牌代码',
         'brand_avatar' => 'brand_avatar|string|true||品牌logo',
         'introduction' => 'introduction|string|false||品牌介绍',
-        'brand_state' => 'brand_state|int|true||品牌状态'
+        'brand_state' => 'brand_state|int|true||品牌状态',
+        'cities' => 'cities|string|false||城市'
       
       ),
 
@@ -32,7 +33,16 @@ class GoodsBrand extends BaseApi {
         'brand_avatar' => 'brand_avatar|string|false||品牌logo',
         'index_show' => 'index_show|int|false||首页展示',
         'introduction' => 'introduction|string|false||品牌介绍',
-        'brand_state' => 'brand_state|int|false||品牌状态'
+        'cities' => 'cities|string|false||城市'
+      
+      ),
+
+      'cityList' => array(
+      
+        'city_code' => 'city_code|string|true||城市编码',
+        'all' => 'all|int|false|0|是否查询全部',
+        'page' => 'page|int|false|1|页码',
+        'page_size' => 'page_size|int|false|20|每页条数'
       
       ),
 
@@ -105,6 +115,18 @@ class GoodsBrand extends BaseApi {
   public function removeBrand() {
   
     return $this->dm->removeBrand($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 城市列表
+   * @desc 城市列表
+   *
+   * @return array list
+   */
+  public function cityList() {
+  
+    return $this->dm->cityList($this->retriveRuleParams(__FUNCTION__));  
   
   }
 

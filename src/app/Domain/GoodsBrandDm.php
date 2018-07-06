@@ -60,4 +60,14 @@ class GoodsBrandDm {
   
   }
 
+  /**
+   * 城市展示品牌列表
+   *
+   */
+  public function cityList($data) {
+  
+    return \App\request('App.GoodsBrand.CityList', $data);
+  
+  }
+
 }
