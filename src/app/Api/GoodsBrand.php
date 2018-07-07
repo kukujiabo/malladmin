@@ -21,6 +21,7 @@ class GoodsBrand extends BaseApi {
         'brand_avatar' => 'brand_avatar|string|true||品牌logo',
         'introduction' => 'introduction|string|false||品牌介绍',
         'brand_state' => 'brand_state|int|true||品牌状态',
+        'index_show' => 'index_show|int|false||首页展示',
         'cities' => 'cities|string|false||城市'
       
       ),
