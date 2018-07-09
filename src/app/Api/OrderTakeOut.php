@@ -40,6 +40,10 @@ class OrderTakeOut extends BaseApi {
 
         'mobile' => 'mobile|string|false||收货人手机号',
 
+        'audit_start' => 'audit_start|string|false||审核开始时间',
+        
+        'audit_end' => 'audit_end|string|false||审核结束时间',
+
         'category_id' => 'category_id|string|false||商品分类编号',
 
         'order_status' => 'order_status|int|false||订单状态 1-未支付 2-已支付 3-已签收',
