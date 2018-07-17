@@ -45,7 +45,7 @@ class Admin extends BaseApi {
             
               'token' => 'token|string|true||后台管理员令牌',
             
-              'account' => 'token|string|true||后台管理员令牌',
+              'account' => 'account|string|true||后台管理员令牌',
             
               'password' => 'password|string|true||后台管理员令牌',
 
