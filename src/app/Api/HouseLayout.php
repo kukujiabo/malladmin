@@ -13,7 +13,7 @@ class HouseLayout extends BaseApi {
 
       'create' => array(
 
-        'token' => 'token|string|true||管理员令牌'
+        'token' => 'token|string|true||管理员令牌',
     
         'layout_name' => 'layout_name|string|true||布局名称',
 
