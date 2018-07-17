@@ -41,6 +41,20 @@ class Admin extends BaseApi {
 
             ),
 
+            'addAcct' => [
+            
+              'token' => 'token|string|true||后台管理员令牌',
+            
+              'account' => 'token|string|true||后台管理员令牌',
+            
+              'password' => 'password|string|true||后台管理员令牌',
+
+              'auth' => 'auth|string|true||后台管理员令牌',
+
+              'city_code' => 'city_code|string|true||后台管理员令牌'
+            
+            ]
+
         ));
 
     }
@@ -104,6 +118,18 @@ class Admin extends BaseApi {
 
         return $this->dm->logout($conditions);
 
+    }
+
+    /**
+     * 新增管理员账号接口
+     * @desc 新增管理员账号接口
+     *
+     * @return int id
+     */
+    public function addAcct() {
+    
+      return $this->dm->addAcct($this->retriveRuleParams(__FUNCTION__));
+    
     }
 
 }

@@ -52,4 +52,10 @@ class AdminDm {
 
     }
 
+    public function addAcct($data) {
+    
+        return \App\request('App.UserAdmin.AddAcct', $data);
+    
+    }
+
 }
