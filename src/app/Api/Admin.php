@@ -55,6 +55,17 @@ class Admin extends BaseApi {
             
             ]
 
+            'getSysAdminList' => array(
+            
+              'token' => 'token|string|true||后台管理员令牌',
+              'user_name' => 'user_name|string|false||后台管理员令牌',
+              'auth' => 'auth|string|false||后台管理员令牌',
+              'city_code' => 'city_code|string|false||后台管理员令牌',
+              'page' => 'page|int|false||查询页码',
+              'page_size' => 'page_size|int|false||每页条数',
+            
+            )
+
         ));
 
     }
@@ -129,6 +140,18 @@ class Admin extends BaseApi {
     public function addAcct() {
     
       return $this->dm->addAcct($this->retriveRuleParams(__FUNCTION__));
+    
+    }
+
+    /**
+     * 查询管理员列表
+     * @desc 查询管理员列表
+     *
+     * @return array 
+     */
+    public function getSysAdminList() {
+    
+      return $this->dm->getSysAdminList($this->retriveRuleParams(__FUNCTION__));
     
     }
 

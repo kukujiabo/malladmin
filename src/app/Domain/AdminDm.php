@@ -58,4 +58,10 @@ class AdminDm {
     
     }
 
+    public function getSysAdminList($data) {
+    
+      return \App\request('App.UserAdmin.GetSysAdminList', $data); 
+    
+    }
+
 }
