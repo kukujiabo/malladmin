@@ -53,7 +53,7 @@ class Admin extends BaseApi {
 
               'city_code' => 'city_code|string|true||后台管理员令牌'
             
-            ]
+            ],
 
             'getSysAdminList' => array(
             
