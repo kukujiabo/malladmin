@@ -19,4 +19,20 @@ class UploadFilesDm {
   
   }
 
+  public function UploadProviderPrice($data) {
+  
+    $newData = [
+    
+      'provider_id' => $data['provider_id'],
+    
+      'file_path' => $_FILES['upfile']['tmp_name'],
+
+      'orig_name' => $_FILES['upfile']['name']
+    
+    ];
+
+    return \App\request('App.GoodsProviderCos.ImportData', $newData);
+  
+  }
+
 }
