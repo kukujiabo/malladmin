@@ -64,6 +64,12 @@ class Admin extends BaseApi {
               'page' => 'page|int|false||查询页码',
               'page_size' => 'page_size|int|false||每页条数',
             
+            ),
+
+            'getSalesManager' => array(
+            
+              'token' => 'token|string|true||后台管理员令牌'
+            
             )
 
         ));
@@ -152,6 +158,18 @@ class Admin extends BaseApi {
     public function getSysAdminList() {
     
       return $this->dm->getSysAdminList($this->retriveRuleParams(__FUNCTION__));
+    
+    }
+
+    /**
+     * 查询销售总监
+     * @desc 查询销售总监
+     *
+     * @return array
+     */
+    public function getSalesManager() {
+    
+      return $this->dm->getSalesManager($this->retriveRuleParams(__FUNCTION__));
     
     }
 

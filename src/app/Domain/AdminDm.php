@@ -64,4 +64,10 @@ class AdminDm {
     
     }
 
+    public function getSalesManager($data) {
+    
+      return \App\request('App.UserAdmin.GetSalesManager', $data); 
+    
+    }
+
 }
