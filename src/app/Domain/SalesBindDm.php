@@ -11,7 +11,7 @@ class SalesBindDm {
 
   public function unbind($data) {
   
-    return \App\request('App.SalesList.Unbind', $data);
+    return \App\request('App.SalesBind.Unbind', $data);
   
   }
 
