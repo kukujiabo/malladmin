@@ -6,7 +6,7 @@ namespace App\Api;
  *
  * @author Meroc Chen <398515393@qq.com>
  */
-class SaleList extends BaseApi {
+class SalesList extends BaseApi {
 
   public function getRules() {
   
