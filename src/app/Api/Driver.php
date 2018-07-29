@@ -18,7 +18,7 @@ class Driver extends BaseApi {
         'name' => 'name|string|true||司机姓名',
         'password' => 'password|string|true||密码',
         'city_code' => 'city_code|string|true||城市代码',
-        'remark' => 'remark|string|true||备注'
+        'remark' => 'remark|string|false||备注'
       
       ),
 
