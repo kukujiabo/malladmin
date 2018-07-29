@@ -1,6 +1,10 @@
 <?php
 namespace App\Api;
 
+/**
+ * 送货员接口
+ *
+ */
 class Driver extends BaseApi {
 
   public function getRules() {
