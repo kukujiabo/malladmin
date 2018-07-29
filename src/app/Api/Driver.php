@@ -27,6 +27,7 @@ class Driver extends BaseApi {
         'token' => 'token|string|true||管理员令牌',
         'account' => 'account|string|false||手机号',
         'name' => 'name|string|false||司机名称',
+        'city_code' => 'city_code|string|false||城市代码',
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
       
