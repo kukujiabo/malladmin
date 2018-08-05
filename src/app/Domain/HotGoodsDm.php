@@ -9,13 +9,13 @@ class HotGoodsDm {
   
   }
 
-  public function getList() {
+  public function getList($data) {
   
     return \App\request('App.HotGoods.GetList', $data);
   
   }
 
-  public function remove() {
+  public function remove($data) {
   
     return \App\request('App.HotGoods.Remove', $data);
   
