@@ -15,4 +15,10 @@ class HotGoodsDm {
   
   }
 
+  public function remove() {
+  
+    return \App\request('App.HotGoods.Remove', $data);
+  
+  }
+
 }
