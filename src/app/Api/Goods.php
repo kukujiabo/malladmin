@@ -95,7 +95,9 @@ class Goods extends BaseApi {
 
                 'goods_number' => 'goods_number|string|true||商品编号',
 
-                'sign' => 'sign|string|true||商品标签',
+                'sign' => 'sign|string|true||商品提示',
+
+                'signature' => 'signature|string|true||商品标签',
 
                 'category_id' => 'category_id|int|true||商品分类id',
 
@@ -177,7 +179,9 @@ class Goods extends BaseApi {
 
                 'goods_name' => 'goods_name|string|true||商品名称',
 
-                'sign' => 'sign|string|true||商品标签',
+                'sign' => 'sign|string|true||商品提示',
+
+                'signature' => 'signature|string|true||商品标签',
 
                 'shop_id' => 'shop_id|int|true||店铺id',
 
