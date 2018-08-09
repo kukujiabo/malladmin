@@ -148,7 +148,10 @@ class OrderTakeOut extends BaseApi {
 
       'updateDistribution' => array(
 
+        'token' => 'token|string|true||用户令牌',
         'order_id' => 'order_id|string|true||订单编号',
+        'driver_name' => 'driver_name|string|true||驾驶员名称',
+        'driver_phone' => 'driver_phone|string|true||驾驶员手机号'
       
       ),
 
@@ -366,16 +369,6 @@ class OrderTakeOut extends BaseApi {
   public function updateDistribution() {
 
     $params = $this->retriveRuleParams(__FUNCTION__);
-
-    $regulation = array(
-
-      'token' => 'required',
-
-      'order_id' => 'required',
-
-    );
-
-    \App\Verification($params, $regulation);
 
     return $this->dm->updateDistribution($params);
   
