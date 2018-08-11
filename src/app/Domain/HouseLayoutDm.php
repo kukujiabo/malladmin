@@ -5,13 +5,13 @@ class HouseLayoutDm {
 
   public function create($data) {
   
-    return \App\apiRequest('App.HouseLayout.Create', $data); 
+    return \App\request('App.HouseLayout.Create', $data); 
   
   }
 
   public function getAll($data) {
   
-    return \App\apiRequest('App.HouseLayout.GetAll', $data); 
+    return \App\request('App.HouseLayout.GetAll', $data); 
   
   }
 
