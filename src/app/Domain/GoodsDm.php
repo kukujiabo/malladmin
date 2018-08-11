@@ -11,8 +11,7 @@ class GoodsDm {
    * 添加商品（包含SUK）
    */
   public function addSkuGoods($data) {
-  
-    return \App\request('App.Goods.AddSkuGoods', $data);
+  return \App\request('App.Goods.AddSkuGoods', $data);
   
   }
 
