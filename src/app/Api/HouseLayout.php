@@ -27,6 +27,14 @@ class HouseLayout extends BaseApi {
 
         'token' => 'token|string|true||管理员令牌'
       
+      ),
+
+      'getDetail' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+
+        'id' => 'id|int|true||布局id'
+      
       )
     
     ));
@@ -54,6 +62,18 @@ class HouseLayout extends BaseApi {
   public function getAll() {
 
     return $this->dm->getAll($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询布局详情
+   * @desc 查询布局详情
+   *
+   * @return array data
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
 

@@ -15,4 +15,10 @@ class HouseLayoutDm {
   
   }
 
+  public function getDetail($data) {
+  
+    return \App\request('App.HouseLayout.GetDetail', $data); 
+  
+  }
+
 }
