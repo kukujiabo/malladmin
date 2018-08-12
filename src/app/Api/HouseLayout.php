@@ -35,6 +35,14 @@ class HouseLayout extends BaseApi {
 
         'id' => 'id|int|true||布局id'
       
+      ),
+
+      'removeLayout' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+
+        'id' => 'id|int|true||布局id'
+      
       )
     
     ));
@@ -74,6 +82,18 @@ class HouseLayout extends BaseApi {
   public function getDetail() {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 删除布局
+   * @desc 删除布局
+   *
+   * @return int num
+   */
+  public function removeLayout() {
+  
+    return $this->dm->removeLayout($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 

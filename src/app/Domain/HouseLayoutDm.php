@@ -21,4 +21,10 @@ class HouseLayoutDm {
   
   }
 
+  public function removeLayout($data) {
+  
+    return \App\request('App.HouseLayout.RemoveLayout', $data);
+  
+  }
+
 }
