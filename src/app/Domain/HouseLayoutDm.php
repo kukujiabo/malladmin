@@ -27,4 +27,10 @@ class HouseLayoutDm {
   
   }
 
+  public function updateLayout($data) {
+  
+    return \App\request('App.HouseLayout.UpdateLayout', $data); 
+  
+  }
+
 }

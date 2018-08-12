@@ -97,4 +97,16 @@ class HouseLayout extends BaseApi {
   
   }
 
+  /**
+   * 更新布局
+   * @desc 更新布局
+   *
+   * @return int num
+   */
+  public function updateLayout() {
+  
+    return $this->dm->updateLayout($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
 }
