@@ -43,6 +43,18 @@ class HouseLayout extends BaseApi {
 
         'id' => 'id|int|true||布局id'
       
+      ),
+
+      'updateLayout' => array(
+
+        'id' => 'id|int|true||布局id',
+      
+        'layout_name' => 'layout_name|string|true||布局名称',
+
+        'info' => 'info|string|false||其他信息',
+
+        'attrs' => 'attrs|string|false||属性'
+      
       )
     
     ));
