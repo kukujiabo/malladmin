@@ -10,6 +10,12 @@ class ConstructType extends BaseApi {
   public function getRules() {
   
     return $this->rules(array(
+
+      '*' => array(
+
+        'token' => 'token|string|true||用户令牌'
+      
+      ),
     
       'create' => array(
       
