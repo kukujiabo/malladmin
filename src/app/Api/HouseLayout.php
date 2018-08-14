@@ -25,7 +25,8 @@ class HouseLayout extends BaseApi {
 
       'getAll' => array(
 
-        'token' => 'token|string|true||管理员令牌'
+        'token' => 'token|string|true||管理员令牌',
+        'get_attr' => 'get_attr|int|false|0|获取属性',
       
       ),
 
