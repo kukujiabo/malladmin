@@ -286,6 +286,12 @@ class Goods extends BaseApi {
             'getAllGoods' => array(
             
             
+            ),
+
+            'getSkuGoods' => array(
+            
+              'sku_name' => 'sku_name|string|false||sku名称'
+            
             )
 
         ));
@@ -539,6 +545,18 @@ class Goods extends BaseApi {
     public function getAllGoods() {
     
       return $this->dm->getAllGoods($this->retriveRuleParams(__FUNCTION__));
+    
+    }
+
+    /**
+     * 获取全部sku商品
+     * @desc 获取全部sku商品
+     *
+     * @return array data
+     */
+    public function getSkuGoods() {
+    
+      return $this->dm->getSkuGoods($this->retriveRuleParams(__FUNCTION__));
     
     }
 

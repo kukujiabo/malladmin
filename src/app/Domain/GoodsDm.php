@@ -187,4 +187,10 @@ class GoodsDm {
   
   }
 
+  public function getSkuGoods($params) {
+  
+    return \App\request('App.GoodsSku.GetAll', $params); 
+  
+  }
+
 }
