@@ -1,6 +1,10 @@
 <?php
 namespace App\Api;
 
+/**
+ * 施工类型接口
+ *
+ */
 class ConstructType extends BaseApi {
 
   public function getRules() {
