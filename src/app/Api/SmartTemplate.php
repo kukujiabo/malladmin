@@ -20,8 +20,6 @@ class SmartTemplate extends BaseApi {
     
       'create' => array(
 
-        'token' => 'token|string|true||用户令牌',
-      
         'template_name' => 'template_name|string|true||模版名称',
       
         'layout_ids' => 'layout_ids|string|true||布局id',
@@ -47,6 +45,22 @@ class SmartTemplate extends BaseApi {
       'getDetail' => array(
       
         'id' => 'id|int|true||id'
+      
+      ),
+
+      'updateTemplate' => array(
+      
+        'id' => 'id|int|true||id'
+      
+        'template_name' => 'template_name|string|true||模版名称',
+      
+        'layout_ids' => 'layout_ids|string|true||布局id',
+
+        'min_measure' => 'min_measure|int|true||最小面积',
+
+        'max_measure' => 'max_measure|int|true||最大面积',
+
+        'goods' => 'goods|string|true||商品'
       
       )
     
@@ -87,6 +101,18 @@ class SmartTemplate extends BaseApi {
   public function getDetail() {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 更新模版
+   * @desc 更新模版
+   *
+   * @return int num
+   */
+  public function updateTemplate() {
+  
+    return $this->dm->updateTemplate($this->retriveRuleParams(__FUNCTION__));
   
   }
 

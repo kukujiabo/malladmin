@@ -20,5 +20,11 @@ class SmartTemplateDm {
     return \App\request('App.SmartTemplate.GetDetail', $data); 
   
   }
+  
+  public function updateTemplate($data) {
+  
+    return \App\request('App.SmartTemplate.UpdateTemplate', $data); 
+  
+  }
 
 }
