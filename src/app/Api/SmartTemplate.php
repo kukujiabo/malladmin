@@ -11,6 +11,12 @@ class SmartTemplate extends BaseApi {
   public function getRules() {
   
     return $this->rules(array(
+
+      '*' => array(
+
+        'token' => 'token|string|true||用户令牌'
+      
+      ),
     
       'create' => array(
 
@@ -35,6 +41,12 @@ class SmartTemplate extends BaseApi {
         'page' => 'page|int|false|1|页码',
 
         'page_size' => 'page_size|int|false||每页条数',
+      
+      ),
+
+      'getDetail' => array(
+      
+        'id' => 'id|int|true||id'
       
       )
     
@@ -63,6 +75,18 @@ class SmartTemplate extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 获取详情
+   * @desc 获取详情
+   *
+   * @return array data
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 

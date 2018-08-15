@@ -15,4 +15,10 @@ class SmartTemplateDm {
   
   }
 
+  public function getDetail($data) {
+  
+    return \App\request('App.SmartTemplate.GetDetail', $data); 
+  
+  }
+
 }
