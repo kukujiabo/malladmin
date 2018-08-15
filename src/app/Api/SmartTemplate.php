@@ -50,7 +50,7 @@ class SmartTemplate extends BaseApi {
 
       'updateTemplate' => array(
       
-        'id' => 'id|int|true||id'
+        'id' => 'id|int|true||id',
       
         'template_name' => 'template_name|string|true||模版名称',
       
