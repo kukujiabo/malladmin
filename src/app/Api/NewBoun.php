@@ -1,6 +1,10 @@
 <?php
 namespace App\Api;
 
+/**
+ * 新人礼包接口
+ *
+ */
 class NewBoun extends BaseApi {
 
   public function getRules() {
