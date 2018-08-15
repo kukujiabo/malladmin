@@ -25,6 +25,8 @@ class Adver extends BaseApi {
 
       'getDetail' => array(
       
+        'token' => 'token|string|true||用户令牌',
+
         'id' => 'id|int|true||广告id'
       
       )
