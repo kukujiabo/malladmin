@@ -51,4 +51,10 @@ class CouponDm {
   
   }
 
+  public function getAllType($data) {
+  
+    return \App\request('App.CouponType.GetAll', $data);
+  
+  }
+
 }

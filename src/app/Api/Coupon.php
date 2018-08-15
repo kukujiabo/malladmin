@@ -168,6 +168,12 @@ class Coupon extends BaseApi {
       
         'page_size' => 'page_size|int|true|20|每页条数',
       
+      ),
+
+      'getAllType'  => array(
+      
+        'token' => 'token|string|true||用户令牌',
+      
       )
     
     ));
@@ -282,6 +288,18 @@ class Coupon extends BaseApi {
   public function couponGetList() {
   
     return $this->dm->couponGetList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 获取全部类型列表
+   * @desc 获取全部类型列表
+   *
+   * @return array data
+   */
+  public function getAllType() {
+  
+    return $this->dm->getAllType($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
