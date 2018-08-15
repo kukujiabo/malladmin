@@ -15,4 +15,10 @@ class NewBounDm {
   
   }
 
+  public function removeBoun($data) {
+  
+    return \App\request('App.NewBoun.RemoveBoun', $data);
+  
+  }
+
 }

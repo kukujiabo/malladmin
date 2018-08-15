@@ -27,6 +27,12 @@ class NewBoun extends BaseApi {
       
       
       
+      ),
+
+      'removeBoun' => array(
+      
+        'id' => 'id|int|true||删除礼包优惠券'
+      
       )
     
     )); 
@@ -55,6 +61,18 @@ class NewBoun extends BaseApi {
   
     return $this->dm->getAll($this->retriveRuleParams(__FUNCTION__));
   
+  }
+
+  /**
+   * 删除礼包优惠券
+   * @desc 删除礼包优惠券
+   *
+   * @return int num
+   */
+  public function removeBoun() {
+  
+    return $this->dm->removeBoun($this->retriveRuleParams(__FUNCTION__)); 
+    
   }
 
 }
