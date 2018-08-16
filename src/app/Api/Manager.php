@@ -64,7 +64,7 @@ class Manager extends BaseApi {
         'wid' =>  'wid|int|true||工地id',
         'status' =>  'status|int|true||状态',
         'page' => 'page|int|false||页码',
-        'page_size' => 'page|int|false||每页条数'
+        'page_size' => 'page_size|int|false||每页条数'
       
       )
     
