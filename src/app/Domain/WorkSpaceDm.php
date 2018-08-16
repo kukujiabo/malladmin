@@ -24,4 +24,10 @@ class WorkSpaceDm {
   
   }
 
+  public function setTiming($params) {
+  
+    return \App\request('App.WorkSpace.SetTiming', $params);
+  
+  }
+
 }

@@ -37,6 +37,14 @@ class WorkSpace extends BaseApi {
         'page' => 'page|int|false||页码',
         'page_size' => 'page_size|int|false||每页条数'
       
+      ),
+
+      'setTiming' => array(
+      
+        'token' => 'token|string|true||管理员令牌',
+        'id' => 'id|int|true||工地id',
+        'cid' => 'cid|int|true||阶段id'
+      
       )
     
     ));
@@ -67,5 +75,16 @@ class WorkSpace extends BaseApi {
   
   }
 
+  /**
+   * 设置阶段
+   * @desc 设置阶段
+   *
+   * @return int num
+   */
+  public function setTiming() {
+  
+    return $this->dm->setTiming($this->retriveRuleParams(__FUNCTION__));
+  
+  }
 
 }
