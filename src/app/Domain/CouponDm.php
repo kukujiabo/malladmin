@@ -63,4 +63,10 @@ class CouponDm {
   
   }
 
+  public function updateCouponType($data) {
+  
+    return \App\request('App.CouponType.Update', $data);
+  
+  }
+
 }

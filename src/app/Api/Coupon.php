@@ -180,6 +180,44 @@ class Coupon extends BaseApi {
       
         'token' => 'token|string|true||用户令牌',
       
+      ),
+
+      'updateCouponType' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+
+        'coupon_type_id' => 'coupon_type_id|int|true||优惠券种类id',
+      
+        'coupon_name' => 'coupon_name|string|false||优惠券名称',
+
+        'coupon_image' => 'coupon_image|string|false||优惠券图片',
+
+        'deduction_type' => 'deduction_type|int|false||抵扣类型:1.折扣，2.抵扣',
+
+        'last_long' => 'last_long|int|false|0|是否长期有效',
+
+        'status' => 'status|int|false|1|启用状态：1.可用，2.停用',
+
+        'term_type' => 'term_type|int|false|2|使用日期类型:1.固定有效期，2.灵活有效期',
+
+        'money' => 'money|int|false||抵扣金额',
+
+        'percentage' => 'percentage|int|false||折扣',
+
+        'start_time' => 'start_time|string|false||有效期开始事件',
+
+        'end_time' => 'end_time|string|false||有效期结束事件',
+
+        'years' => 'years|int|false|0|有效期（年）',
+
+        'months' => 'months|int|false|0|有效期（月）',
+
+        'days' => 'days|int|false|0|有效期（日）',
+
+        'at_least' => 'at_least|int|false|0|消费满额',
+
+        'online_type' => 'online_type|int|false|3|线上线下：1，线上；2，线下；3，通用',
+
       )
     
     ));
@@ -318,6 +356,18 @@ class Coupon extends BaseApi {
   public function getCouponTypeDetail() {
   
     return $this->dm->getCouponTypeDetail($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 更新优惠券种类
+   * @desc 更新优惠券种类
+   *
+   * @return array data
+   */
+  public function updateCouponType() {
+  
+    return $this->dm->updateCouponType($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
