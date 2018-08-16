@@ -57,4 +57,10 @@ class CouponDm {
   
   }
 
+  public function getCouponTypeDetail($data) {
+  
+    return \App\request('App.CouponType.GetDetail', $data);
+  
+  }
+
 }

@@ -134,6 +134,12 @@ class Coupon extends BaseApi {
       
       ),
 
+      'getCouponTypeDetail' => array(
+      
+        'coupon_type_id' => 'coupon_type_id|int|true||优惠券种类id'
+      
+      ),
+
       'couponGrantUnionLog' => array(
       
         'token' => 'token|string|true||用户令牌',
@@ -300,6 +306,18 @@ class Coupon extends BaseApi {
   public function getAllType() {
   
     return $this->dm->getAllType($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 获取优惠券详情
+   * @desc 获取优惠券详情
+   *
+   * @return array data
+   */
+  public function getCouponTypeDetail() {
+  
+    return $this->dm->getCouponTypeDetail($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
