@@ -49,6 +49,7 @@ class Manager extends BaseApi {
       
         'token' => 'token|string|true||管理员令牌',
         'mid' =>  'mid|int|true||项目经理id',
+        'cid' =>  'cid|int|true||施工阶段id',
         'wid' =>  'wid|int|true||工地id',
         'status' =>  'status|int|true||状态',
         'min_credit' =>  'min_credit|int|true||最小额度',
