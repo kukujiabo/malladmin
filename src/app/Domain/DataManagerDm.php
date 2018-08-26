@@ -15,4 +15,10 @@ class DataManagerDm {
   
   }
 
+  public function removeManager($data) {
+  
+    return \App\request('App.DataManager.RemoveManager', $data);
+  
+  }
+
 }

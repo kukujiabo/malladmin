@@ -34,6 +34,12 @@ class DataManager extends BaseApi {
 
         'page_size' => 'page_size|int|false||每页条数'
       
+      ),
+
+      'removeManager' => array(
+      
+        'id' => 'id|int|true||数据员id'
+      
       )
     
     ));
@@ -61,6 +67,18 @@ class DataManager extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 删除数据员
+   * @desc 删除数据员
+   *
+   * @return int num
+   */
+  public function removeManager() {
+  
+    return $this->dm->removeManager($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
