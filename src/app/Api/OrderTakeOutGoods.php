@@ -17,6 +17,15 @@ class OrderTakeOutGoods extends BaseApi {
         'token' => 'token|string|true||令牌',
         'order_take_out_id' => 'order_take_out_id|int|true||订单id'
       
+      ),
+
+      'batchReturnGoods' => array(
+      
+        'token' => 'token|string|true||令牌',
+        'order_take_out_id' => 'order_take_out_id|int|true||订单id',
+        'goods_id' => 'goods_id|string|true||订单商品id',
+        'num' => 'num|string|true||订单商品退货数量',
+      
       )
     
     ));
@@ -32,6 +41,18 @@ class OrderTakeOutGoods extends BaseApi {
   public function getAll() {
   
     return $this->dm->getAll($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 批量退货
+   * @desc 批量退货
+   *
+   * @return
+   */
+  public function batchReturnGoods() {
+  
+    return $this->dm->batchReturnGoods($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 

@@ -9,4 +9,10 @@ class OrderTakeOutGoodsDm {
   
   }
 
+  public function batchReturnGoods($params) {
+  
+    return \App\request('App.OrderTakeOutGoods.BatchReturnGoods', $params);
+  
+  }
+
 }
