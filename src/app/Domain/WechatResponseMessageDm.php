@@ -5,7 +5,7 @@ class WechatResponseMessageDm {
 
   public function editResponseMessage($params) {
   
-    return \App\request('App.WechatResponseMessage.EditAutoResponse', $params);
+    return \App\request('App.WechatResponseMessage.EditResponseMessage', $params);
   
   }
 
