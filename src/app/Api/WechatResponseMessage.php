@@ -91,6 +91,30 @@ class WechatResponseMessage extends BaseApi {
   }
 
   /**
+   * 编辑任意字自动回复
+   * @desc 编辑任意字自动回复
+   *
+   * @return int num
+   */
+  public function editDefaultMessage() {
+  
+    return $this->dm->editDefaultMessage($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询任意字默认回复
+   * @desc 查询任意字默认回复
+   *
+   * @return string 
+   */
+  public function getDefaultMessage() {
+  
+    return $this->dm->getDefaultMessage($this->retriveRuleParams(__FUNCTION__)); 
+
+  }
+
+  /**
    * 添加关键字回复
    * @desc 添加关键字回复
    *
