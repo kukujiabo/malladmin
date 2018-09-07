@@ -40,6 +40,12 @@ class WechatResponseMessageDm {
   
   }
 
+  public function getFocusResponse() {
+  
+    return \App\request('App.WechatResponseMessage.GetFocusResponse');
+  
+  }
+
   public function getUserReply($params) {
   
     return \App\request('App.WechatResponseMessage.GetUserMessage', $params);
