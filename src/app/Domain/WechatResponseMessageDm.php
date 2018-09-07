@@ -9,6 +9,13 @@ class WechatResponseMessageDm {
   
   }
 
+  public function editDefaultMessage($params) {
+  
+    return \App\request('App.WechatResponseMessage.EditDefaultMessage', $params);
+  
+  }
+
+
   public function addKeywordResponse($params) {
   
     return \App\request('App.WechatResponseMessage.AddKeywordResponse', $params);
@@ -27,9 +34,9 @@ class WechatResponseMessageDm {
   
   }
 
-  public function getFocusResponse() {
+  public function getDefaultMessage() {
   
-    return \App\request('App.WechatResponseMessage.GetFocusResponse');
+    return \App\request('App.WechatResponseMessage.GetDefaultMessage');
   
   }
 
