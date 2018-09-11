@@ -36,4 +36,10 @@ class GoodsPriceMapDm {
   
   }
 
+  public function syncSkuPriceByGoodsId($params) {
+  
+    return \App\request('App.GoodsPriceMap.SyncSkuPriceByGoodsId', $params);
+  
+  }
+
 }

@@ -89,6 +89,14 @@ class GoodsPriceMap extends BaseApi {
 
         'id' => 'id|int|true||价格id'
       
+      ),
+
+      'syncSkuPriceByGoodsId' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+
+        'goods_id' => 'goods_id|int|true||商品id'
+      
       )
     
     ));
@@ -160,6 +168,18 @@ class GoodsPriceMap extends BaseApi {
   public function batchEdit() {
   
     return $this->dm->batchEdit($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 新增sku价格商品id
+   * @desc 新增sku价格商品id
+   *
+   * @return
+   */
+  public function syncSkuPriceByGoodsId() {
+    
+    return $this->dm->syncSkuPriceByGoodsId(
   
   }
 
