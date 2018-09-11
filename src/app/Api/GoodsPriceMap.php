@@ -179,7 +179,7 @@ class GoodsPriceMap extends BaseApi {
    */
   public function syncSkuPriceByGoodsId() {
     
-    return $this->dm->syncSkuPriceByGoodsId(
+    return $this->dm->syncSkuPriceByGoodsId($this->retriveRuleParams(__FUNCTION__));
   
   }
 
