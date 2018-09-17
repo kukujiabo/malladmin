@@ -103,7 +103,7 @@ class Goods extends BaseApi {
 
                 'state' => 'state|int|true|0|商品状态 0下架，1正常，10违规（禁售）',
 
-                'price' => 'price|float|true||本店售价（元）',
+                'price' => 'price|float|false||本店售价（元）',
 
                 'max_price' => 'max_price|float|true||本店售价（元）',
 
@@ -191,7 +191,7 @@ class Goods extends BaseApi {
 
                 'state' => 'state|int|true|0|商品状态 0下架，1正常，10违规（禁售）',
 
-                'price' => 'price|float|true||本店售价（元）',
+                'price' => 'price|float|false||本店售价（元）',
 
                 'max_price' => 'max_price|float|true||本店售价（元）',
 
