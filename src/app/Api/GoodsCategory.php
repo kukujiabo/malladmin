@@ -47,7 +47,7 @@ class GoodsCategory extends BaseApi {
 
                 'index_show' => 'index_show|int|false||首页展示',
 
-                'sign' => 'sign|int|false||标签'
+                'sign' => 'sign|string|false||标签'
 
             ),
 
@@ -137,7 +137,7 @@ class GoodsCategory extends BaseApi {
 
                 'category_name' => 'category_name|string|false||商品分类名称',
                 
-                'sign' => 'sign|int|false||标签',
+                'sign' => 'sign|string|false||标签',
 
                 'short_name' => 'short_name|string|false||商品分类简称',
 
