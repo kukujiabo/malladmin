@@ -70,4 +70,14 @@ class GoodsBrandDm {
   
   }
 
+  /**
+   * 获取品牌详情
+   *
+   */
+  public function getDetail($data) {
+  
+    return \App\request('App.GoodsBrand.GetDetail', $data);
+  
+  }
+
 }

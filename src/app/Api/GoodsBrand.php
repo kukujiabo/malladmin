@@ -68,6 +68,12 @@ class GoodsBrand extends BaseApi {
         'token' => 'token|string|true||用户令牌',
         'id' => 'id|int|true||品牌id'
       
+      ),
+
+      'getDetail' => array(
+      
+        'id' => 'id|int|true||品牌id'
+      
       )
     
     ));
@@ -131,6 +137,18 @@ class GoodsBrand extends BaseApi {
   public function cityList() {
   
     return $this->dm->cityList($this->retriveRuleParams(__FUNCTION__));  
+  
+  }
+
+  /**
+   * 获取品牌详情
+   * @desc 获取品牌详情
+   *
+   * @return array data
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
 
