@@ -189,6 +189,8 @@ class Coupon extends BaseApi {
         'token' => 'token|string|true||用户令牌',
 
         'coupon_type_id' => 'coupon_type_id|int|true||优惠券种类id',
+
+        'coupon_desc' => 'coupon_desc|string|false||优惠券说明',
       
         'coupon_name' => 'coupon_name|string|false||优惠券名称',
 
