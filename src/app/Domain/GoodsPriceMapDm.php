@@ -42,4 +42,10 @@ class GoodsPriceMapDm {
   
   }
 
+  public function removeAllPriceItem($params) {
+  
+    return \App\request('App.GoodsPriceMap.RemoveAllPriceItem', $params);
+  
+  }
+
 }
