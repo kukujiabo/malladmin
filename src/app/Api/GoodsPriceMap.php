@@ -105,7 +105,7 @@ class GoodsPriceMap extends BaseApi {
       
         'token' => 'token|string|true||用户令牌',
 
-        'goods_id' => 'goods_id|string|true||商品id'
+        'ids' => 'ids|string|true||商品id'
       
       )
     
