@@ -191,7 +191,7 @@ class Admin extends BaseApi {
      */
     public function editPass() {
     
-      return $thsis->dm->editPass($this->retriveRuleParams(__FUNCTION__));
+      return $this->dm->editPass($this->retriveRuleParams(__FUNCTION__));
     
     }
 
