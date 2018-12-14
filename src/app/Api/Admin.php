@@ -74,7 +74,7 @@ class Admin extends BaseApi {
 
             'editPass' => array(
             
-              'token' => 'token|string|true||后台管理员令牌'
+              'token' => 'token|string|true||后台管理员令牌',
 
               'id' => 'id|int|true||管理员id',
 
