@@ -70,6 +70,16 @@ class Admin extends BaseApi {
             
               'token' => 'token|string|true||后台管理员令牌'
             
+            ),
+
+            'editPass' => array(
+            
+              'token' => 'token|string|true||后台管理员令牌'
+
+              'id' => 'id|int|true||管理员id',
+
+              'password' => 'password|string|true||管理员密码'
+            
             )
 
         ));
@@ -170,6 +180,18 @@ class Admin extends BaseApi {
     public function getSalesManager() {
     
       return $this->dm->getSalesManager($this->retriveRuleParams(__FUNCTION__));
+    
+    }
+
+    /**
+     * 编辑密码
+     * @desc 编辑密码
+     *
+     * @return int num
+     */
+    public function editPass() {
+    
+      return $thsis->dm->editPass($this->retriveRuleParams(__FUNCTION__));
     
     }
 

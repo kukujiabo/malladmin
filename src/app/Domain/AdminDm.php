@@ -38,23 +38,23 @@ class AdminDm {
      */
     public function getAdmin($data) {
 
-        $data_array['token'] = $data['token'];
+      $data_array['token'] = $data['token'];
 
-        $response = \App\request('App.UserAdmin.GetAdmin', $data_array);
+      $response = \App\request('App.UserAdmin.GetAdmin', $data_array);
 
-        $response['role'] = $response['admin_group'];
+      $response['role'] = $response['admin_group'];
 
-        $response['name'] = $response['admin_name'];
+      $response['name'] = $response['admin_name'];
 
-        $response['avatar'] = $response['user_headimg'];
+      $response['avatar'] = $response['user_headimg'];
 
-        return $response;
+      return $response;
 
     }
 
     public function addAcct($data) {
     
-        return \App\request('App.UserAdmin.AddAcct', $data);
+      return \App\request('App.UserAdmin.AddAcct', $data);
     
     }
 
@@ -67,6 +67,12 @@ class AdminDm {
     public function getSalesManager($data) {
     
       return \App\request('App.UserAdmin.GetSalesManager', $data); 
+    
+    }
+
+    public function editPass($data) {
+    
+      return \App\request('App.UserAdmin.EditPass', $data); 
     
     }
 
