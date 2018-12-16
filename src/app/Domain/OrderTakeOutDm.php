@@ -307,4 +307,10 @@ class OrderTakeOutDm {
   
   }
 
+  public function reAudit($data) {
+  
+    return \App\request('App.OrderTakeOut.reAudit', $data); 
+  
+  }
+
 }

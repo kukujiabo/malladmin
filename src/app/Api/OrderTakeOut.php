@@ -277,6 +277,12 @@ class OrderTakeOut extends BaseApi {
       'asyncRecall' => array(
       
       
+      ),
+
+      'reAudit' => array(
+      
+        'order_id' => 'order_id|int|true||订单id',
+      
       )
       
     ));
@@ -705,6 +711,7 @@ class OrderTakeOut extends BaseApi {
 
   /**
    * 更新帐套号
+   * @desc 更新帐套号
    *
    */
   public function updateCas() {
@@ -712,5 +719,17 @@ class OrderTakeOut extends BaseApi {
     return $this->dm->updateCas($this->retriveRuleParams(__FUNCTION__));
   
   } 
+
+  /**
+   * 重新审核
+   * @desc 重新审核
+   *
+   * @return int num
+   */
+  public function reAudit() {
+  
+    return $this->dm->reAudit($this->retriveRuleParams(__FUNCTION__));
+  
+  }
 
 }
