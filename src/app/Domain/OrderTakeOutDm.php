@@ -313,4 +313,10 @@ class OrderTakeOutDm {
   
   }
 
+  public function cancelGoodsReturn($data) {
+  
+    return \App\request('App.OrderTakeOut.CancelGoodsReturn', $data);
+  
+  }
+
 }

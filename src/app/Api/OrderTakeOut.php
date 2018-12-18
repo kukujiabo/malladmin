@@ -283,6 +283,12 @@ class OrderTakeOut extends BaseApi {
       
         'order_id' => 'order_id|int|true||订单id',
       
+      ),
+
+      'cancelGoodsReturn' => array(
+      
+        'id' => 'id|int|true||退货id',
+      
       )
       
     ));
@@ -729,6 +735,18 @@ class OrderTakeOut extends BaseApi {
   public function reAudit() {
   
     return $this->dm->reAudit($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 取消商品回退
+   * @desc 取消商品回退
+   *
+   * @return int num
+   */
+  public function cancelGoodsReturn() {
+  
+    return $this->dm->cancelGoodsReturn($this->retriveRuleParams(__FUNCTION__));
   
   }
 
