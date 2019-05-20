@@ -67,6 +67,8 @@ class Goods extends BaseApi {
 
                 'state' => 'state|int|false||商品状态 0下架，1正常，10违规（禁售）',
 
+                'city_code' => 'city_code|string|false||展示城市',
+
                 'index_show' => 'index_show|int|false||首页展示',
 
                 'is_pinkage' => 'is_pinkage|int|false||是否包邮 1-是 2-否',
